@@ -61,3 +61,57 @@ inv_corr_mat = np.linalg.inv(corr_mat)
 print(pd.Series(np.diag(inv_corr_mat), index=df.select_dtypes(exclude=['category']).columns))
 
 # %%
+
+# Feature engineering
+# Total Bill per size
+# df['total_bill_per_size'] = df['total_bill'] / df['size']
+
+# # Train Test Split
+# X = df.drop('tip', axis=1)
+# y = df['tip']
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# # Categorical
+# cat_vars = df.select_dtypes(include=['object']).columns
+
+# # Pipeline
+# pipe = Pipeline([
+#     ('encoder', OneHotEncoder(variables=['sex', 'smoker', 'day', 'time'],
+#                               drop_last=True)),
+#     ('model', LinearRegression())
+# ])
+
+# # Fit
+# pipe.fit(X_train, y_train)
+
+# %%
+
+# Data
+df = sns.load_dataset('tips')
+
+# Clip total_bill
+df['total_bill'] = df['total_bill'].clip(upper=np.quantile(df['total_bill'], 0.95))
+
+# Transformation
+df[['total_bill','tip']] = np.log(df[['total_bill','tip']])
+
+
+# Train Test Split
+X = df.drop(['tip', 'time'], axis=1)
+y = df['tip']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Categorical
+cat_vars = df.select_dtypes(include=['object']).columns
+
+# Pipeline
+pipe = Pipeline([
+    ('encoder', OneHotEncoder(variables=['sex', 'smoker', 'day'],
+                              drop_last=True)),
+    ('model', LinearRegression())
+])
+
+# Fit
+pipe.fit(X_train, y_train)
+
+# %%

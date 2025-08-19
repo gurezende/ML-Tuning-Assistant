@@ -48,20 +48,22 @@ Follow these steps to get a copy of the project up and running on your local mac
 You can run the app directly from the web, using the deployed version.<br>
 https://ml-tuning-assistant.streamlit.app/
 
-### 1. Clone the repository
+### Running Locally
+
+#### 1. Clone the repository
 
 ```bash
 git clone https://github.com/gurezende/ML-Tuning-Assistant.git
 cd your-repo-name
 ```
 
-### 2. Install the required packages
+#### 2. Install the required packages
 
 ```python
-pip install -r <package_name>
+pip install <package_name>
 ```
 
-### 3. Run the Agent
+#### 3. Run the Agent
 
 Run the Streamlit application from the terminal:
 

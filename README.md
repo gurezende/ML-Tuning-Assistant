@@ -7,13 +7,13 @@ This AI Agent, powered by LangGraph and Streamlit, assists data scientists and m
 ## 📖 Table of Contents
 
 [✨ Features](#-features)<br>
-[🚀 Getting Started](#)<br>
-[Prerequisites](#)<br>
-[Installation](#)<br>
-[Usage](#)<br>
-[📁 Project Structure](#)<br>
-[🤝 Contributing](#)<br>
-[📄 License](#)<br>
+[🚀 Getting Started](#-getting-started)<br>
+[Requirements](#requirements)<br>
+[Installation](#how-to-run)<br>
+[📁 Project Structure](#-project-structure)<br>
+[Demonstration](#demonstration)<br>
+[📄 License](#-license)<br>
+[About](#about)
 
 ## ✨ Features
 
@@ -25,7 +25,7 @@ This AI Agent, powered by LangGraph and Streamlit, assists data scientists and m
 
 Follow these steps to get a copy of the project up and running on your local machine.
 
-## Prerequisites
+## Requirements
 
 * Python 3.8 or higher
 * Google API key for the Gemini model

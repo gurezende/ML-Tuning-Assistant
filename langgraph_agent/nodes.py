@@ -12,7 +12,7 @@ def get_model_type(state):
     """Check if the user is implementing a classification or regression model. """
     
     # Define the model type
-    modeltype = st.text_input("Please let me know the type of model you are working on and hit Enter:", 
+    modeltype = st.text_input("Please let me know the type of model you are working on and :red[**press enter**] to continue:", 
                               placeholder="(C)lassification or (R)egression", 
                               help="C for Classification or R for Regression")
     

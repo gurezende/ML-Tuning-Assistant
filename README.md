@@ -43,6 +43,11 @@ Follow these steps to get a copy of the project up and running on your local mac
 
 ## How to Run
 
+### Deployed App
+
+You can run the app directly from the web, using the deployed version.<br>
+https://ml-tuning-assistant.streamlit.app/
+
 ### 1. Clone the repository
 
 ```bash

@@ -16,4 +16,5 @@ dependencies = [
     "scikit-learn>=1.7.1",
     "seaborn>=0.13.2",
     "streamlit>=1.48.1",
+    "scikit-optimize>=0.10.2",
 ]

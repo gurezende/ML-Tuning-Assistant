@@ -40,7 +40,8 @@ st.write(':red[**3**] | 🤖 The AI Agent will respond with suggestions on how t
 st.divider()
 
 # Get the user input
-text = st.text_area('**👨‍💻 Add here the metrics of your ML model to be tuned:**')
+text = st.text_area('**👨‍💻 Add here the metrics of your ML model to be tuned:**',
+                    placeholder="e.g., datsaset features, statistical descriptions, model name, accuracy, precision, recall, f1, etc.",)
 
 st.divider()
 
@@ -60,6 +61,7 @@ with st.spinner("Gathering Tuning Suggestions...", show_time=True):
 
     # Invoke the agent
     result = agent.invoke(prompt)
+    
     # Print the agent's response
     st.write('**🤖 Agent Response:**')
     st.write(result['final_answer'][0].content)

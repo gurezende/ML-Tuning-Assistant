@@ -56,4 +56,4 @@ def build_graph():
 # Create the graph image and save png
 # from IPython.display import display, Image
 # graph = build_graph()
-# display(Image(graph.get_graph().draw_mermaid_png()))
+# display(Image(graph.get_graph().draw_mermaid_png(output_file_path="graph.png")))

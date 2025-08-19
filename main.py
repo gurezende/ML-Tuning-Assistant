@@ -1,3 +1,4 @@
+import os
 from langgraph_agent.graph import AgentState, build_graph
 from textwrap import dedent
 import streamlit as st
@@ -12,11 +13,11 @@ st.set_page_config(page_title="ML Model Tuning Assistant",
 
 ## SIDEBAR | Add a place to enter the API key
 with st.sidebar:
-    api_key = st.text_input("OPENAI_API_KEY", type="password")
+    api_key = st.text_input("GOOGLE_API_KEY", type="password")
 
     # Save the API key to the environment variable
     if api_key:
-        os.environ["OPENAI_API_KEY"] = api_key
+        os.environ["GEMINI_API_KEY"] = api_key
 
     # Clear
     if st.button('Clear'):

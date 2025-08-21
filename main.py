@@ -30,7 +30,7 @@ with st.sidebar:
 
 ## Title and Instructions
 if not api_key:
-    st.warning("Please enter your OpenAI API key in the sidebar.")
+    st.warning("Please enter your Google API key in the sidebar.")
     
 st.title('ML Model Tuning Assistant | 🤖')
 st.caption('This AI Agent is will help you tuning your machine learning model.')
